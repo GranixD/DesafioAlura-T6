@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/darkmode.css">
+    <link rel="stylesheet" href="./src/styles/modal.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <title>DecodificadorONE</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./public/Logo.svg" alt="Logo da Alura">
+        <div class="dark-mode-container">
+            <span>Dark Mode</span>
+            <input type="checkbox" name="check" id="check">
+            <label class="dark-mode" for="check"></label>
+        </div>
+
+    </header>
+
+    <dialog>
+        <p class="titulo-modal"></p>
+        <p class="texto-modal"></p>
+        <button id="botaoFechar" onclick=fecharModal()>Ok</button>
+    </dialog>
+
+    <main>
+        <div class="container-principal">
+            <label for="texto-original">Digite um texto</label>
+
+            <textarea id="texto-original"></textarea>
+            <span><img src="./public/Vector.png" alt="Atenção">Apenas letras! Evite caracteres especiais e
+                acentos</span>
+            <div class="buttons">
+                <button type="button" id="criptografar">Criptografar</button>
+                <button type="button" id="descriptografar">Descriptografar</button>
+            </div>
+        </div>
+        <div class="container-mobile">
+            <div class="texto-criptografado">
+                <h3 class="titulo-mensagem">Nenhuma mensagem encontrada!</h3>
+                <span class="texto-mensagem">Digite o texto que você deseja criptografar ou descriptografar</span>
+                <button type="button" class="copiar" onclick=ativarBotaoCopiar()>Copiar</button>
+            </div>
+        </div>
+        <div class="container-desktop">
+            <div class="texto-criptografado">
+                <img class="bg-mensagem" src="./public/background.svg" alt="Imagem nenhuma mensagem encontrada">
+                <h3 class="titulo-mensagem">Nenhuma mensagem encontrada!</h3>
+                <span class="texto-mensagem">Digite o texto que você deseja criptografar ou descriptografar</span>
+                <button type="button" class="copiar" onclick=ativarBotaoCopiar()>Copiar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span>&copy; Matheus Almeida 2024.</span>
+    </footer>
+
+    <script src="./src/scripts/index.js"></script>
+    <script src="./src/scripts/darkMode.js"></script>
+</body>
+
+</html>
